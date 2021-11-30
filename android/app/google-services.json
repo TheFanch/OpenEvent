@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "231526037014",
+    "project_id": "openevent-44f2b",
+    "storage_bucket": "openevent-44f2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231526037014:android:146bb32b2bfb6deecfa737",
+        "android_client_info": {
+          "package_name": "com.OpenEventTeam.open_event"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "231526037014-8rrhaedhdk1bvuuk6dvk3pagrb46pd3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCg68L4IUzceha1kIRgXEmfz55XnC4Mpo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "231526037014-8rrhaedhdk1bvuuk6dvk3pagrb46pd3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
