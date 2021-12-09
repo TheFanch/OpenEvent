@@ -5,7 +5,7 @@ class event {
   String libelle;
   String lieu;
   individu autor;
-  var date;
+  DateTime date;
   int id;
 
   //constructeur de la class event
@@ -24,7 +24,7 @@ class event {
     return this.autor;
   }
 
-  getDate() {
+  DateTime getDate() {
     return this.date;
   }
 
@@ -45,7 +45,7 @@ class event {
     this.autor = autor;
   }
 
-  setDate(var date) {
+  setDate(DateTime date) {
     this.date = date;
   }
 
