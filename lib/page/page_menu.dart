@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:open_event/main.dart';
 import 'package:open_event/page/page_login.dart';
 
 class MainMenu extends StatelessWidget {
@@ -39,7 +40,10 @@ class MainMenu extends StatelessWidget {
     switch(item) {
       case 0:
         print('Homepage');
-        LoginPage();
+        Navigator.of(context)
+            .pushAndRemoveUntil(
+              MaterialPageRoute(builder: (context) => MyHomePage(title: 'title')), (route) => false
+            );
         break;
       case 1:
         print('Login');

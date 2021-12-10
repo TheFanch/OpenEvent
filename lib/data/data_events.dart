@@ -37,10 +37,24 @@ class DataEvents {
     },
     {
       'id': 5,
-      'libelle': '',
-      'lieu': 'Cinéma Liberté, Brest',
-      'date': '2022-01-08 18:00:00',
+      'libelle': 'Dev Flutter',
+      'lieu': 'Open Campus, Brest',
+      'date': '2022-01-07 18:00:00',
       'author': 2,
+    },
+    {
+      'id': 6,
+      'libelle': 'Dev Flutter',
+      'lieu': 'Open Campus, Brest',
+      'date': '2022-01-07 18:00:00',
+      'author': 1,
+    },
+    {
+      'id': 7,
+      'libelle': 'Dev Flutter',
+      'lieu': 'Open Campus, Brest',
+      'date': '2022-01-07 18:00:00',
+      'author': 3,
     },
   ];
 }

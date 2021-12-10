@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Open Events',
-      home: MyHomePage(title: 'Events Open'),
+      home: MyHomePage(title: 'Open Events'),
     );
   }
 }
@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: GenAppBar(title: title),
+      appBar: GenAppBar(title: title, isHomepage: true),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -46,6 +46,7 @@ class MyHomePage extends StatelessWidget {
   }
 
   List getWeekEvents() {
+    print('build events list');
     String pattern = 'yyyy-MM-dd HH:mm:ss';
     var list = [];
     DataEvents.events.forEach((event) {

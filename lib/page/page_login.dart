@@ -7,7 +7,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: GenAppBar(title: 'Login'),
+      appBar: GenAppBar(title: 'Login', isHomepage: false),
     );
   }
 
