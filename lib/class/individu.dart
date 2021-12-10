@@ -1,11 +1,11 @@
-class individu {
+class Individu {
   //variables de la classe individu
   String nom;
   String prenom;
   int id;
 
   //constructeur de la class individu
-  individu(this.nom, this.prenom, this.id) {}
+  Individu(this.nom, this.prenom, this.id) {}
 
   //Les getters de la class individu
   String getNom() {

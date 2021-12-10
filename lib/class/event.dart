@@ -1,15 +1,15 @@
 import 'package:open_event/class/individu.dart';
 
-class Event {
+class OpenEvent {
   //variables de la class event
   String libelle;
   String lieu;
-  individu author;
+  Individu author;
   DateTime date;
   int id;
 
   //constructeur de la class event
-  Event(this.libelle, this.lieu, this.author, this.date, this.id) {}
+  OpenEvent(this.libelle, this.lieu, this.author, this.date, this.id) {}
 
   //Les getters de la class event
   String getLibelle() {
@@ -20,7 +20,7 @@ class Event {
     return this.lieu;
   }
 
-  individu getAutor() {
+  Individu getAutor() {
     return this.author;
   }
 
@@ -41,7 +41,7 @@ class Event {
     this.lieu = lieu;
   }
 
-  setAutor(individu author) {
+  setAutor(Individu author) {
     this.author = author;
   }
 

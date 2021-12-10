@@ -2,7 +2,7 @@ import 'individu.dart';
 
 class chat_message {
   //variable de la class chat_message
-  individu autor;
+  Individu autor;
   int id;
   String content;
 
@@ -10,7 +10,7 @@ class chat_message {
   chat_message(this.autor, this.id, this.content) {}
 
   //Les Getters de la class chat message
-  individu getAutor() {
+  Individu getAutor() {
     return this.autor;
   }
 
@@ -23,7 +23,7 @@ class chat_message {
   }
 
   //Les Setters de la class chat_message
-  setAutor(individu autor) {
+  setAutor(Individu autor) {
     this.autor = autor;
   }
 

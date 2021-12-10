@@ -3,10 +3,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:open_event/data/data_events.dart';
+import 'package:open_event/page/page_event.dart';
 import 'package:open_event/page/page_menu.dart';
 import 'package:open_event/page/parts/gen_app_bar.dart';
 
 import 'class/event.dart';
+import 'class/individu.dart';
+import 'data/data_individu.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,6 +35,13 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: GenAppBar(title: title),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            EventsSection(events: getWeekEvents()),
+          ],
+        )
+      ),
     );
   }
 
@@ -39,8 +49,9 @@ class MyHomePage extends StatelessWidget {
     String pattern = 'yyyy-MM-dd HH:mm:ss';
     var list = [];
     DataEvents.events.forEach((event) {
+      Individu ind = DataIndividu.getFromId(event['author']);
       DateTime date = DateFormat(pattern).parse(event['date']);
-      list.add(Event(event['libelle'], event['lieu'], event['author'], event['date'], event['id']));
+      list.add(OpenEvent(event['libelle'], event['lieu'], ind, date, event['id']));
     });
     return list;
   }
