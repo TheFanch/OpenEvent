@@ -7,9 +7,21 @@ class OpenEvent {
   Individu author;
   DateTime date;
   int id;
+  List participants = [];
+  int maxParticipants;
+  List posts = [];
 
   //constructeur de la class event
-  OpenEvent(this.libelle, this.lieu, this.author, this.date, this.id) {}
+  OpenEvent(
+      this.libelle,
+      this.lieu,
+      this.author,
+      this.date,
+      this.id,
+      this.maxParticipants,
+      this.participants,
+      this.posts
+      ) {}
 
   //Les getters de la class event
   String getLibelle() {

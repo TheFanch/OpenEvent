@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:open_event/data/data_events.dart';
+import 'package:open_event/data/data_posts.dart';
 import 'package:open_event/page/page_event.dart';
 import 'package:open_event/page/page_menu.dart';
 import 'package:open_event/page/parts/gen_app_bar.dart';
@@ -47,13 +48,24 @@ class MyHomePage extends StatelessWidget {
 
   List getWeekEvents() {
     print('build events list');
-    String pattern = 'yyyy-MM-dd HH:mm:ss';
-    var list = [];
+    List eventsCol = [];
     DataEvents.events.forEach((event) {
-      Individu ind = DataIndividu.getFromId(event['author']);
+      /* List inds = DataIndividu.getListFromIdList(event['participants']);
+      List posts = DataPost.getListFromIds(event['posts']);
+      Individu? ind = DataIndividu.getFromId(event['author']);
       DateTime date = DateFormat(pattern).parse(event['date']);
-      list.add(OpenEvent(event['libelle'], event['lieu'], ind, date, event['id']));
+      list.add(OpenEvent(
+          event['libelle'],
+          event['lieu'],
+          ind!,
+          date,
+          event['id'],
+          event['max'],
+          inds,
+          posts
+      ));// */
+      eventsCol.add(DataEvents.getFromId(event['id']));
     });
-    return list;
+    return eventsCol;
   }
 }
